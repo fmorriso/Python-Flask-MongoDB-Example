@@ -22,4 +22,4 @@ A python Flask example with a MongoDB backend.
 
 
 ## References
-* [Display an Image in Java](https://www.delftstack.com/howto/java/display-an-image-in-java/)
+* [PyMongo](https://pymongo.readthedocs.io/en/stable/index.html)
