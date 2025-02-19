@@ -40,11 +40,12 @@ def hello_world():  # put application's code here
 
 """
 FIX THIS METHOD
-client = MongoClient("mongodb://localhost:27017/")
+#client = MongoClient("mongodb://localhost:27017/")
 db = client["mydatabase"]
 collection = db["users"]
 @bp.route('/users', methods = ['GET'])
 def get_users():
+    client = get_mongodb_client()
     users = list(collection.find({}, {"_id": 0}))
     return jsonify(users)
 """
