@@ -43,12 +43,19 @@ FIX THIS METHOD
 #client = MongoClient("mongodb://localhost:27017/")
 db = client["mydatabase"]
 collection = db["users"]
-@bp.route('/users', methods = ['GET'])
-def get_users():
-    client = get_mongodb_client()
-    users = list(collection.find({}, {"_id": 0}))
-    return jsonify(users)
 """
+@bp.route('/customers', methods = ['GET'])
+def get_customers():
+    client = get_mongodb_client()
+    database_name = ProgramSettings.get_setting('MONGODB_DATABASE')
+    db = client[database_name]
+    collection = db['customers']
+    customers = collection.find_one()
+    print(f'{customers=}')
+    json_customers = jsonify(customers)
+    print(f'{json_customers=}')
+    return json_customers
+
 
 @bp.route('/about')
 def about():
