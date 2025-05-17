@@ -16,10 +16,11 @@ A python Flask example with a MongoDB backend.
 
 ## Change History
 
-| Date       | Description          |
-|:-----------|:---------------------|
-| 2025-02-19 | Initial creation     |
-| 2025-05-02 | add requirements.txt |
+| Date       | Description                   |
+|:-----------|:------------------------------|
+| 2025-02-19 | Initial creation              |
+| 2025-05-02 | add requirements.txt          |
+| 2025-05-17 | update connection information |
 
 
 ## References
